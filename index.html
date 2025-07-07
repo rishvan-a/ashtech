@@ -33,16 +33,18 @@
 
 
     .card {
-      border: none;
-      border-radius: 15px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      transition: transform 0.4s ease, box-shadow 0.4s ease;
-    }
+  border: none;
+  border-radius: 15px;
+  background: #fff;  /* Ensure white background */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);  /* Slightly stronger */
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
 
-    .card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 12px 30px rgba(0,0,0,0.2);
-    }
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+}
+
 
     .card img {
   width: 60px;   /* or try 50px for smaller */
@@ -114,113 +116,124 @@
   </section>
 
   <section id="services" class="py-5 text-center fade-in">
-    <div class="container">
-      <h2 class="fw-bold mb-4">Our <span class="text-gradient">Core Services</span></h2>
-      <p class="mb-5">We ensure your IT infrastructure is secure, reliable, and efficient.</p>
-      <div class="row g-4">
-        <div class="col-md-4">
-          <div class="card h-100 p-3">
-            <div class="card-body">
-              <img src="it.png" class="mb-3">
-              <h5 class="card-title fw-semibold">IT Infrastructure Maintenance</h5>
-              <p class="card-text">Proactive monitoring and maintenance of servers, workstations, and devices.</p>
-              <ul style="color:#555; font-size:15px; line-height:1.8;">
-                <li>Server Health Checks</li>
-                <li>Hardware Management</li>
-                <li>OS & Patch Updates</li>
-                <li>Performance Tuning</li>
-              </ul>
-              <a href="#" class="btn btn-link">Learn More</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card h-100 p-3">
-            <div class="card-body">
-              <img src="cctv.png" class="mb-3">
-              <h5 class="card-title fw-semibold">CCTV & Surveillance</h5>
-              <p class="card-text">Design, installation, and maintenance of high-definition CCTV systems.</p>
-              <ul style="color:#555; font-size:15px; line-height:1.8;">
-                <li>IP & Analog Cameras</li>
-                <li>Remote Viewing</li>
-                <li>Video Analytics</li>
-                <li>System Upgrades</li>
-              </ul>
-              <a href="#" class="btn btn-link">Learn More</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card h-100 p-3">
-            <div class="card-body">
-              <img src="security.png" class="mb-3">
-              <h5 class="card-title fw-semibold">Network Security</h5>
-              <p class="card-text">Protect your network from internal and external threats with security protocols.</p>
-              <ul style="color:#555; font-size:15px; line-height:1.8;">
-                <li>Firewall Management</li>
-                <li>VPN Configuration</li>
-                <li>Intrusion Detection</li>
-                <li>Security Audits</li>
-              </ul>
-              <a href="#" class="btn btn-link">Learn More</a>
-            </div>
-          </div>
-        </div>
+  <div class="container">
+    <h2 class="fw-bold mb-4">Our <span class="text-gradient">Core Services</span></h2>
+    <p class="mb-5">We ensure your IT infrastructure is secure, reliable, and efficient.</p>
 
-        <div class="col-md-4">
-          <div class="card h-100 p-3">
-            <div class="card-body">
-              <img src="cable.png" class="mb-3">
-              <h5 class="card-title fw-semibold">Structured Cabling</h5>
-              <p class="card-text">Professional installation of network and data cabling for connectivity.</p>
-              <ul style="color:#555; font-size:15px; line-height:1.8;">
-                <li>Data & Voice Cabling</li>
-                <li>Fiber Optic Installation</li>
-                <li>Cable Management</li>
-                <li>Network Rack Setup</li>
-              </ul>
-              <a href="#" class="btn btn-link">Learn More</a>
-            </div>
+    <div class="row g-4">
+
+      <!-- Card 1 -->
+      <div class="col-md-4">
+        <div class="card h-100 p-3 shadow-sm border-0">
+          <div class="card-body d-flex flex-column align-items-center text-center">
+            <img src="it.png" alt="IT Infrastructure" class="mb-3" style="max-width: 60px;">
+            <h5 class="card-title fw-bold mb-2">IT Infrastructure Maintenance</h5>
+            <p class="card-text small text-muted mb-3">Proactive monitoring and maintenance of servers, workstations, and devices.</p>
+            <ul class="text-start" style="color:#555; font-size:15px; line-height:1.8; max-width:220px;">
+              <li>Server Health Checks</li>
+              <li>Hardware Management</li>
+              <li>OS & Patch Updates</li>
+              <li>Performance Tuning</li>
+            </ul>
+            <a href="#" class="btn btn-link p-0 mt-2">Learn More</a>
           </div>
         </div>
-
-        <div class="col-md-4">
-          <div class="card h-100 p-3">
-            <div class="card-body">
-              <img src="backup.png" class="mb-3">
-              <h5 class="card-title fw-semibold">Data Backup & Recovery</h5>
-              <p class="card-text">Automated backup solutions and disaster recovery plans to protect data.</p>
-              <ul style="color:#555; font-size:15px; line-height:1.8;">
-                <li>Automated Backups</li>
-                <li>Cloud & On-Premise</li>
-                <li>Disaster Recovery Plan</li>
-                <li>Data Restoration</li>
-              </ul>
-              <a href="#" class="btn btn-link">Learn More</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <div class="card h-100 p-3">
-            <div class="card-body">
-              <img src="clock.png" class="mb-3">
-              <h5 class="card-title fw-semibold">24/7 Monitoring & Support</h5>
-              <p class="card-text">Round-the-clock monitoring of your systems with dedicated support team.</p>
-              <ul style="color:#555; font-size:15px; line-height:1.8;">
-                <li>Real-time Alerts</li>
-                <li>Remote Support</li>
-                <li>On-site Assistance</li>
-                <li>Helpdesk Services</li>
-              </ul>
-              <a href="#" class="btn btn-link">Learn More</a>
-            </div>
-          </div>
-        </div>
-
       </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-4">
+        <div class="card h-100 p-3 shadow-sm border-0">
+          <div class="card-body d-flex flex-column align-items-center text-center">
+            <img src="cctv.png" alt="CCTV" class="mb-3" style="max-width: 60px;">
+            <h5 class="card-title fw-bold mb-2">CCTV & Surveillance</h5>
+            <p class="card-text small text-muted mb-3">Design, installation, and maintenance of high-definition CCTV systems.</p>
+            <ul class="text-start" style="color:#555; font-size:15px; line-height:1.8; max-width:220px;">
+              <li>IP & Analog Cameras</li>
+              <li>Remote Viewing</li>
+              <li>Video Analytics</li>
+              <li>System Upgrades</li>
+            </ul>
+            <a href="#" class="btn btn-link p-0 mt-2">Learn More</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-4">
+        <div class="card h-100 p-3 shadow-sm border-0">
+          <div class="card-body d-flex flex-column align-items-center text-center">
+            <img src="security.png" alt="Network Security" class="mb-3" style="max-width: 60px;">
+            <h5 class="card-title fw-bold mb-2">Network Security</h5>
+            <p class="card-text small text-muted mb-3">Protect your network from internal and external threats with security protocols.</p>
+            <ul class="text-start" style="color:#555; font-size:15px; line-height:1.8; max-width:220px;">
+              <li>Firewall Management</li>
+              <li>VPN Configuration</li>
+              <li>Intrusion Detection</li>
+              <li>Security Audits</li>
+            </ul>
+            <a href="#" class="btn btn-link p-0 mt-2">Learn More</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="col-md-4">
+        <div class="card h-100 p-3 shadow-sm border-0">
+          <div class="card-body d-flex flex-column align-items-center text-center">
+            <img src="cable.png" alt="Structured Cabling" class="mb-3" style="max-width: 60px;">
+            <h5 class="card-title fw-bold mb-2">Structured Cabling</h5>
+            <p class="card-text small text-muted mb-3">Professional installation of network and data cabling for connectivity.</p>
+            <ul class="text-start" style="color:#555; font-size:15px; line-height:1.8; max-width:220px;">
+              <li>Data & Voice Cabling</li>
+              <li>Fiber Optic Installation</li>
+              <li>Cable Management</li>
+              <li>Network Rack Setup</li>
+            </ul>
+            <a href="#" class="btn btn-link p-0 mt-2">Learn More</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="col-md-4">
+        <div class="card h-100 p-3 shadow-sm border-0">
+          <div class="card-body d-flex flex-column align-items-center text-center">
+            <img src="backup.png" alt="Data Backup" class="mb-3" style="max-width: 60px;">
+            <h5 class="card-title fw-bold mb-2">Data Backup & Recovery</h5>
+            <p class="card-text small text-muted mb-3">Automated backup solutions and disaster recovery plans to protect data.</p>
+            <ul class="text-start" style="color:#555; font-size:15px; line-height:1.8; max-width:220px;">
+              <li>Automated Backups</li>
+              <li>Cloud & On-Premise</li>
+              <li>Disaster Recovery Plan</li>
+              <li>Data Restoration</li>
+            </ul>
+            <a href="#" class="btn btn-link p-0 mt-2">Learn More</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="col-md-4">
+        <div class="card h-100 p-3 shadow-sm border-0">
+          <div class="card-body d-flex flex-column align-items-center text-center">
+            <img src="clock.png" alt="Monitoring Support" class="mb-3" style="max-width: 60px;">
+            <h5 class="card-title fw-bold mb-2">24/7 Monitoring & Support</h5>
+            <p class="card-text small text-muted mb-3">Round-the-clock monitoring of your systems with dedicated support team.</p>
+            <ul class="text-start" style="color:#555; font-size:15px; line-height:1.8; max-width:220px;">
+              <li>Real-time Alerts</li>
+              <li>Remote Support</li>
+              <li>On-site Assistance</li>
+              <li>Helpdesk Services</li>
+            </ul>
+            <a href="#" class="btn btn-link p-0 mt-2">Learn More</a>
+          </div>
+        </div>
+      </div>
+
     </div>
-  </section>
+  </div>
+</section>
+
 
   <section class="py-5 bg-light text-center fade-in">
     <div class="container">
@@ -316,9 +329,9 @@
 
       <div class="col-md-4 col-lg-3 col-xl-3 mb-md-0 mb-4">
         <h6 class="text-uppercase fw-bold mb-3 text-white">Contact</h6>
-        <p style="font-size: 14px;color: #bbb;"><i class="bi bi-geo-alt-fill"></i> 123 Business Park, City Name, State</p>
+        <p style="font-size: 14px;color: #bbb;"><i class="bi bi-geo-alt-fill"></i> Box:113049,Dubai-U.A.E</p>
         <p style="font-size: 14px;color: #bbb;"><i class="bi bi-envelope-fill"></i> info@ashtechinfosolution.com</p>
-        <p style="font-size: 14px;color: #bbb;"><i class="bi bi-telephone-fill"></i> +91 98765 43210</p>
+        <p style="font-size: 14px;color: #bbb;"><i class="bi bi-telephone-fill"></i>Mob: 0551814502</p>
         <div class="mt-3">
           <a href="#" class="me-3 text-muted"><i class="bi bi-facebook"></i></a>
           <a href="#" class="me-3 text-muted"><i class="bi bi-linkedin"></i></a>
