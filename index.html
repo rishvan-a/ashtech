@@ -8,48 +8,97 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
     body {
-      font-family: 'Poppins', sans-serif;
-      background-color: #f3f7fa;
-      color: #333;
-      scroll-behavior: smooth;
-    }
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8fbff;
+  color: #272727;
+  scroll-behavior: smooth;
+}
 
-    .text-gradient {
-      background: linear-gradient(90deg, #0052D4, #4364F7, #00C9FF);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
+.text-gradient {
+  background: linear-gradient(90deg, #0052D4, #4364F7, #00C9FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
-    footer {
-      background: #222;
-      color: #bbb;
-      padding: 15px 0;
-      font-size: 13px;
-    }
+footer {
+  background: #222;
+  color: #bbb;
+  padding: 15px 0;
+  font-size: 13px;
+}
 
-    .card img {
-      width: 50px;
-      height: 50px;
-    }
+.card {
+  transition: transform 0.4s ease, box-shadow 0.4s ease, background-color 0.4s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border: none;
+  border-radius: 16px;
+  background-color: #fff;
+}
 
-    .card:hover {
-      transform: translateY(-10px);
-      transition: 0.4s ease;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-    }
+.card:hover {
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  background-color: #ffffff;
+}
 
-    .fade-in {
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeIn 1s forwards;
-    }
+.card-body {
+  padding: 30px;
+}
 
-    @keyframes fadeIn {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
+.card img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 15px;
+}
+
+.card-title {
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #0a0a0a;
+}
+
+.card p {
+  font-size: 16px;
+  color: #585858;
+  margin-bottom: 15px;
+}
+
+.card ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 15px;
+}
+
+.card ul li::before {
+  content: " ";
+  color: #00C9FF;
+  margin-right: 6px;
+}
+
+.card a {
+  font-weight: 600;
+  color: #0052D4;
+  text-decoration: none;
+}
+
+.card a:hover {
+  text-decoration: underline;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
   </style>
 </head>
 
@@ -76,7 +125,8 @@
       <div class="row align-items-center">
         <div class="col-lg-6 mb-4 mb-lg-0">
           <h1 class="fw-bold display-5">Reliable IT Infrastructure & <span class="text-gradient">CCTV Solutions</span></h1>
-          <p class="lead">Your trusted partner for robust IT services, server management, and surveillance systems.</p>
+          <p class="lead" style="color: #6c757d;">Your trusted partner for robust IT services, server management, and surveillance systems.</p>
+
           <div class="d-flex flex-wrap gap-2 justify-content-center">
             <a href="#contact" class="btn btn-primary px-4">Get a Free Quote</a>
             <a href="#services" class="btn btn-outline-primary px-4">Our Services</a>
@@ -114,12 +164,12 @@
               <img src="it.png" class="mb-3">
               <h5 class="card-title fw-semibold">IT Infrastructure Maintenance</h5>
               <p>Proactive monitoring and maintenance of your servers, workstations, and network devices to ensure optimal performance.</p>
-        <ul>
-          <li>Server Health Checks</li>
-          <li>Hardware Management</li>
-          <li>OS & Patch Updates</li>
-          <li>Performance Tuning</li>
-        </ul>
+       <ul style="color: #494949; font-size: 15px; font-family: 'Poppins', sans-serif; line-height: 1.8;">
+  <li>Server Health Checks</li>
+  <li>Hardware Management</li>
+  <li>OS & Patch Updates</li>
+  <li>Performance Tuning</li>
+</ul>
               <a href="#" class="btn btn-link">Learn More</a>
             </div>
           </div>
@@ -131,7 +181,7 @@
               <img src="cctv.png" class="mb-3">
               <h5 class="card-title fw-semibold">CCTV & Surveillance</h5>
               <p>Design, installation, and maintenance of high-definition CCTV systems for comprehensive security coverage.</p>
-        <ul>
+        <ul style="color: #494949;font-size: medium;">
           <li>IP & Analog Cameras</li>
           <li>Remote Viewing</li>
           <li>Video Analytics</li>
@@ -148,7 +198,7 @@
               <img src="security.png" class="mb-3">
               <h5 class="card-title fw-semibold">Network Security</h5>
               <p>Protect your network from internal and external threats with our robust security solutions and protocols.</p>
-        <ul>
+        <ul style="color: #494949; font-size: 15px; font-family: 'Poppins', sans-serif; line-height: 1.8;">
           <li>Firewall Management</li>
           <li>VPN Configuration</li>
           <li>Intrusion Detection</li>
@@ -165,7 +215,7 @@
               <img src="cable.png" class="mb-3">
               <h5 class="card-title fw-semibold">Structured Cabling</h5>
               <p>Professional installation of network and data cabling for reliable and high-speed connectivity.</p>
-        <ul>
+        <ul style="color: #494949; font-size: 15px; font-family: 'Poppins', sans-serif; line-height: 1.8;">
           <li>Data & Voice Cabling</li>
           <li>Fiber Optic Installation</li>
           <li>Cable Management</li>
@@ -182,7 +232,7 @@
               <img src="backup.png" class="mb-3">
               <h5 class="card-title fw-semibold">Data Backup & Recovery</h5>
               <p>Implement automated backup solutions and disaster recovery plans to protect your critical business data.</p>
-        <ul>
+        <ul style="color: #494949; font-size: 15px; font-family: 'Poppins', sans-serif; line-height: 1.8;">
           <li>Automated Backups</li>
           <li>Cloud & On-Premise</li>
           <li>Disaster Recovery Plan</li>
@@ -199,7 +249,7 @@
               <img src="clock.png" class="mb-3">
               <h5 class="card-title fw-semibold">24/7 Monitoring & Support</h5>
               <p>Round-the-clock monitoring of your systems with a dedicated support team ready to assist you anytime.</p>
-        <ul>
+        <ul style="color: #494949; font-size: 15px; font-family: 'Poppins', sans-serif; line-height: 1.8;">
           <li>Real-time Alerts</li>
           <li>Remote Support</li>
           <li>On-site Assistance</li>
