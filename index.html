@@ -1,4 +1,7 @@
-<!DOCTYPE html><html lang="en"><head>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ashtech Infosolution</title>
@@ -8,31 +11,50 @@
       font-family: 'Poppins', sans-serif;
       background-color: #f3f7fa;
       color: #333;
-    }.text-gradient {
-  background: linear-gradient(90deg, #0052D4, #4364F7, #00C9FF);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
+      scroll-behavior: smooth;
+    }
 
-footer {
-  background: #222;
-  color: #bbb;
-  padding: 15px 0;
-  font-size: 13px;
-}
+    .text-gradient {
+      background: linear-gradient(90deg, #0052D4, #4364F7, #00C9FF);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
 
-.card img {
-  width: 50px;
-  height: 50px;
-}
+    footer {
+      background: #222;
+      color: #bbb;
+      padding: 15px 0;
+      font-size: 13px;
+    }
 
-.card:hover {
-  transform: scale(1.05);
-  transition: 0.4s ease;
-}
+    .card img {
+      width: 50px;
+      height: 50px;
+    }
 
+    .card:hover {
+      transform: translateY(-10px);
+      transition: 0.4s ease;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeIn 1s forwards;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
   </style>
-</head><body>  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
     <div class="container">
       <a class="navbar-brand fw-bold" href="#">Ashtech <span class="text-gradient">Infosolution</span></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -47,7 +69,9 @@ footer {
         <a href="#contact" class="btn btn-primary rounded-pill">Get a Quote</a>
       </div>
     </div>
-  </nav>  <section class="py-5 text-center bg-light">
+  </nav>
+
+  <section class="py-5 text-center bg-light fade-in">
     <div class="container">
       <div class="row align-items-center">
         <div class="col-lg-6 mb-4 mb-lg-0">
@@ -77,7 +101,9 @@ footer {
         </div>
       </div>
     </div>
-  </section>  <section id="services" class="py-5 text-center">
+  </section>
+
+  <section id="services" class="py-5 text-center fade-in">
     <div class="container">
       <h2 class="fw-bold mb-4">Our <span class="text-gradient">Core Services</span></h2>
       <p class="mb-5">We provide a comprehensive suite of services to ensure your IT infrastructure is secure, reliable, and efficient.</p>
@@ -87,68 +113,108 @@ footer {
             <div class="card-body">
               <img src="it.png" class="mb-3">
               <h5 class="card-title fw-semibold">IT Infrastructure Maintenance</h5>
-              <p class="card-text">Proactive monitoring and maintenance of servers, workstations, and devices.</p>
+              <p>Proactive monitoring and maintenance of your servers, workstations, and network devices to ensure optimal performance.</p>
+        <ul>
+          <li>Server Health Checks</li>
+          <li>Hardware Management</li>
+          <li>OS & Patch Updates</li>
+          <li>Performance Tuning</li>
+        </ul>
               <a href="#" class="btn btn-link">Learn More</a>
             </div>
           </div>
-        </div><div class="col-md-4">
-      <div class="card h-100 shadow-sm">
-        <div class="card-body">
-          <img src="cctv.png" class="mb-3">
-          <h5 class="card-title fw-semibold">CCTV & Surveillance</h5>
-          <p class="card-text">Design, installation, and maintenance of high-definition CCTV systems.</p>
-          <a href="#" class="btn btn-link">Learn More</a>
         </div>
+
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <img src="cctv.png" class="mb-3">
+              <h5 class="card-title fw-semibold">CCTV & Surveillance</h5>
+              <p>Design, installation, and maintenance of high-definition CCTV systems for comprehensive security coverage.</p>
+        <ul>
+          <li>IP & Analog Cameras</li>
+          <li>Remote Viewing</li>
+          <li>Video Analytics</li>
+          <li>System Upgrades</li>
+        </ul>
+              <a href="#" class="btn btn-link">Learn More</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <img src="security.png" class="mb-3">
+              <h5 class="card-title fw-semibold">Network Security</h5>
+              <p>Protect your network from internal and external threats with our robust security solutions and protocols.</p>
+        <ul>
+          <li>Firewall Management</li>
+          <li>VPN Configuration</li>
+          <li>Intrusion Detection</li>
+          <li>Security Audits</li>
+        </ul>
+              <a href="#" class="btn btn-link">Learn More</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <img src="cable.png" class="mb-3">
+              <h5 class="card-title fw-semibold">Structured Cabling</h5>
+              <p>Professional installation of network and data cabling for reliable and high-speed connectivity.</p>
+        <ul>
+          <li>Data & Voice Cabling</li>
+          <li>Fiber Optic Installation</li>
+          <li>Cable Management</li>
+          <li>Network Rack Setup</li>
+        </ul>
+              <a href="#" class="btn btn-link">Learn More</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <img src="backup.png" class="mb-3">
+              <h5 class="card-title fw-semibold">Data Backup & Recovery</h5>
+              <p>Implement automated backup solutions and disaster recovery plans to protect your critical business data.</p>
+        <ul>
+          <li>Automated Backups</li>
+          <li>Cloud & On-Premise</li>
+          <li>Disaster Recovery Plan</li>
+          <li>Data Restoration</li>
+        </ul>
+              <a href="#" class="btn btn-link">Learn More</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <img src="clock.png" class="mb-3">
+              <h5 class="card-title fw-semibold">24/7 Monitoring & Support</h5>
+              <p>Round-the-clock monitoring of your systems with a dedicated support team ready to assist you anytime.</p>
+        <ul>
+          <li>Real-time Alerts</li>
+          <li>Remote Support</li>
+          <li>On-site Assistance</li>
+          <li>Helpdesk Services</li>
+        </ul>
+              <a href="#" class="btn btn-link">Learn More</a>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
+  </section>
 
-    <div class="col-md-4">
-      <div class="card h-100 shadow-sm">
-        <div class="card-body">
-          <img src="security.png" class="mb-3">
-          <h5 class="card-title fw-semibold">Network Security</h5>
-          <p class="card-text">Protect your network from internal and external threats with security protocols.</p>
-          <a href="#" class="btn btn-link">Learn More</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-4">
-      <div class="card h-100 shadow-sm">
-        <div class="card-body">
-          <img src="cable.png" class="mb-3">
-          <h5 class="card-title fw-semibold">Structured Cabling</h5>
-          <p class="card-text">Professional installation of network and data cabling for connectivity.</p>
-          <a href="#" class="btn btn-link">Learn More</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-4">
-      <div class="card h-100 shadow-sm">
-        <div class="card-body">
-          <img src="backup.png" class="mb-3">
-          <h5 class="card-title fw-semibold">Data Backup & Recovery</h5>
-          <p class="card-text">Automated backup solutions and disaster recovery plans to protect data.</p>
-          <a href="#" class="btn btn-link">Learn More</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-4">
-      <div class="card h-100 shadow-sm">
-        <div class="card-body">
-          <img src="clock.png" class="mb-3">
-          <h5 class="card-title fw-semibold">24/7 Monitoring & Support</h5>
-          <p class="card-text">Round-the-clock monitoring of your systems with dedicated support team.</p>
-          <a href="#" class="btn btn-link">Learn More</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-  </section>  <section class="py-5 bg-light">
+  <section class="py-5 bg-light fade-in">
     <div class="container text-center">
       <h2 class="fw-bold mb-4">What Our <span class="text-gradient">Clients Say</span></h2>
       <div class="row g-4">
@@ -172,7 +238,9 @@ footer {
         </div>
       </div>
     </div>
-  </section>  <section id="about" class="py-5">
+  </section>
+
+  <section id="about" class="py-5 fade-in">
     <div class="container">
       <div class="row align-items-center">
         <div class="col-lg-6">
@@ -184,7 +252,9 @@ footer {
         </div>
       </div>
     </div>
-  </section>  <section id="contact" class="py-5">
+  </section>
+
+  <section id="contact" class="py-5 fade-in">
     <div class="container text-center">
       <h2 class="fw-bold mb-4">Request a <span class="text-gradient">Free Quote</span></h2>
       <form class="mx-auto" style="max-width: 500px;">
@@ -200,8 +270,15 @@ footer {
         <button type="submit" class="btn btn-primary w-100">Submit</button>
       </form>
     </div>
-  </section>  <footer class="text-center">
+  </section>
+
+  <footer class="text-center">
     <div class="container">
       <p class="mb-0">&copy; 2025 Ashtech Infosolution. All rights reserved.</p>
     </div>
-  </footer>  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script></body></html>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
