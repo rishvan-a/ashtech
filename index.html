@@ -6,6 +6,12 @@
   <title>Ashtech</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Swiper CSS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper@10/swiper-bundle.min.css" />
+
+<!-- Swiper JS -->
+<script defer src="https://unpkg.com/swiper@10/swiper-bundle.min.js"></script>
+
 <style>
   body {
     font-family: 'Poppins', sans-serif;
@@ -327,6 +333,280 @@
   line-height: 1.7;
 }
 
+/* Target only the third image (bottom one in About section) */
+.about-images .bottom-image img {
+  width: 70%;
+  max-width: 350px;
+  border-radius: 12px;
+  margin: 0 auto;
+}
+
+@media (max-width: 576px) {
+  .img-wrapper:nth-child(3) {
+    flex: 1 1 90%;
+    max-width: 200px; /* Instead of 90% */
+  }
+
+  .img-wrapper:nth-child(1),
+  .img-wrapper:nth-child(2) {
+    flex: 1 1 45%;
+    max-width: 45%;
+  }
+
+  .image-collage {
+    gap: 12px;
+  }
+
+  .img-wrapper {
+    width: 100%;
+  }
+}
+/* ================= Scroll Animations ================= */
+.fade-in,
+.fade-in-up,
+.animate-img,
+.img-wrapper {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in.show,
+.fade-in-up.show,
+.animate-img.show,
+.img-wrapper.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.slide-from-left {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.slide-from-left.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ================= Section Title ================= */
+.section-title {
+  font-size: 2rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, #0052D4, #4364F7, #00C9FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+/* ================= Testimonial Section ================= */
+.testimonial-section {
+  background-color: #f4f8fc;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.testimonial-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+/* ================= Testimonial Box ================= */
+.testimonial-box {
+  flex: 1 1 300px;
+  min-height: 350px;
+  background: linear-gradient(136deg, #0052D4, #4364F7, #00C9FF);
+  color: #fff;
+  padding: 50px 40px;
+  border-radius: 25px;
+  max-width: 950px;
+  margin: 0 auto;
+  text-align: left;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 2;
+}
+
+/* Decorative Circles */
+.circle-left,
+.circle-right {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.3);
+  z-index: 0;
+}
+
+.circle-left {
+  top: 20px;
+  left: 20px;
+}
+
+.circle-right {
+  bottom: 20px;
+  right: 20px;
+}
+
+/* ================= Testimonial Content ================= */
+.testimonial-logo {
+  font-weight: bold;
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+}
+
+.testimonial-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  font-style: normal;
+}
+
+.testimonial-author {
+  margin-top: 30px;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #e3f2fd;
+}
+
+.testimonial-author span {
+  font-size: 0.9rem;
+  display: block;
+  opacity: 0.9;
+}
+
+/* ================= Carousel Controls ================= */
+.carousel-control-prev,
+.carousel-control-next {
+  width: 50px;
+  height: 50px;
+  background: rgb(160, 239, 253);
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 1;
+  color: #69bef6;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-size: 100% 100%;
+  background-image: none;
+}
+
+.carousel-control-prev::after,
+.carousel-control-next::after {
+  content: '';
+}
+
+.carousel-control-prev i,
+.carousel-control-next i {
+  font-size: 22px;
+  color: #007bff;
+}
+
+/* ================= Responsive ================= */
+@media (max-width: 768px) {
+  .testimonial-box {
+    padding: 30px 20px;
+    font-size: 1rem;
+    min-height: 320px;
+  }
+
+  .testimonial-text {
+    font-size: 1rem;
+  }
+
+  .testimonial-author {
+    font-size: 0.9rem;
+  }
+
+  .circle-left,
+  .circle-right {
+    width: 40px;
+    height: 40px;
+    opacity: 0.5;
+  }
+}
+
+.hero {
+  background: url('net.png') center/cover no-repeat;
+  height: 100vh;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 0 15px;
+  }
+
+  .hero .content { 
+    text-align: center;
+    padding-bottom: 0; /* remove extra space */
+  }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(10px); }
+}
+
+.animate-bounce {
+  animation: bounce 1.5s infinite;
+}
+
+.hero-section {
+  position: relative;
+  background: url('net.png') center/cover no-repeat;
+  height: 100vh;
+}
+
+.quote-text {
+  position: absolute;
+  bottom: -40px;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+
+.scroll-down-indicator {
+  position: absolute;
+  bottom: -80px;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+
+@media (max-width: 768px) {
+  .quote-text {
+    bottom: -80px;
+    font-size: 0.9rem;
+  }
+  .scroll-down-indicator {
+    bottom: -140px;
+  }
+}
+
+
+
 
 </style>
 
@@ -356,8 +636,8 @@
     </div>
   </nav>
 
-<section class="hero-section d-flex align-items-center" style="background: url('net.jpg') center/cover no-repeat; min-height: 100vh; position: relative;">
-  <div class="overlay" style="position: absolute; inset: 0; background: rgba(0,0,0,0.6); z-index: 1;"></div>
+<section class="hero-section d-flex align-items-center" style="background: url('net.png') center/cover no-repeat; height: 100vh; position: relative;">
+  <div class="overlay" style="position: absolute; inset: 0; background: rgba(1, 18, 105, 0.6); z-index: 1;"></div>
 
   <div class="container position-relative text-white" style="z-index: 2;">
     <div class="row align-items-center">
@@ -374,8 +654,21 @@
         </div>
       </div>
     </div>
+
+    <!-- Quote and Scroll Indicator moved here -->
+    <!-- INSIDE .col-lg-6 -->
+<div class="position-relative mt-5">
+  <div class="quote-text text-center w-100 mb-3">
+    <p class="text-light fst-italic">“Empowering your digital infrastructure, one connection at a time.”</p>
+  </div>
+  <div class="scroll-down-indicator text-center w-100">
+    <i class="bi bi-chevron-down text-white fs-1 animate-bounce"></i>
+  </div>
+</div>
+
   </div>
 </section>
+
 
 
 
@@ -582,60 +875,50 @@
   </div>
 </section>
 
-<!-- Testimonials -->
-<section class="py-5 bg-light text-center fade-in">
-  <div class="container">
-    <h2 class="fw-bold mb-5">What Our <span class="text-gradient">Clients Say</span></h2>
-    <div class="row g-4">
-
-      <!-- Testimonial 1 -->
-      <div class="col-md-4">
-        <div class="testimonial-card p-4 shadow-sm rounded bg-white h-100">
-          <div class="testimonial-stars mb-2">⭐⭐⭐⭐⭐</div>
-          <p class="testimonial-text">"Excellent service! Highly recommend. Their team ensured we felt secure and supported throughout."</p>
-          <div class="d-flex align-items-center justify-content-center mt-4">
-            <img src="https://i.pravatar.cc/60?img=1" class="rounded-circle me-3" alt="Client 1">
-            <div>
-              <h6 class="mb-0 fw-semibold">Arun Kumar</h6>
-              <small class="text-muted">Dubai, UAE</small>
+<section class="testimonial-section py-5">
+  <div class="container fade-in-up">
+    <h2 class="section-title text-center mb-4">What Our Clients Say</h2>
+    <div id="testimonialSlider" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="testimonial-box mx-auto">
+            <div class="testimonial-logo mb-2">🔒 Ashtech Infosolution</div>
+            <p class="testimonial-text">"Ashtech Infosolution transformed our digital presence and protected our critical systems. Their expert cybersecurity solutions gave us peace of mind."</p>
+            <div class="testimonial-author mt-4">
+              <strong>Ananya Sharma</strong><br><span>CTO, FinEdge Technologies</span>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="testimonial-box mx-auto">
+            <div class="testimonial-logo mb-2">🔒 Ashtech Infosolution</div>
+            <p class="testimonial-text">"The team at Ashtech Infosolution is proactive, responsive, and extremely skilled. Their services helped us identify vulnerabilities we didn’t even know existed."</p>
+            <div class="testimonial-author mt-4">
+              <strong>Ravi Menon</strong><br><span>Founder, NexaWare Solutions</span>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="testimonial-box mx-auto">
+            <div class="testimonial-logo mb-2">🔒 Ashtech Infosolution</div>
+            <p class="testimonial-text">"From strategy to execution, Ashtech's team has been phenomenal in handling our cloud security and compliance needs. Highly recommended."</p>
+            <div class="testimonial-author mt-4">
+              <strong>Pooja Iyer</strong><br><span>Security Analyst, DataFort India</span>
             </div>
           </div>
         </div>
       </div>
-
-      <!-- Testimonial 2 -->
-      <div class="col-md-4">
-        <div class="testimonial-card p-4 shadow-sm rounded bg-white h-100">
-          <div class="testimonial-stars mb-2">⭐⭐⭐⭐⭐</div>
-          <p class="testimonial-text">"Professional and reliable team. Their support helped us maintain uninterrupted operations."</p>
-          <div class="d-flex align-items-center justify-content-center mt-4">
-            <img src="https://i.pravatar.cc/60?img=2" class="rounded-circle me-3" alt="Client 2">
-            <div>
-              <h6 class="mb-0 fw-semibold">Fatima Noor</h6>
-              <small class="text-muted">Sharjah, UAE</small>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Testimonial 3 -->
-      <div class="col-md-4">
-        <div class="testimonial-card p-4 shadow-sm rounded bg-white h-100">
-          <div class="testimonial-stars mb-2">⭐⭐⭐⭐⭐</div>
-          <p class="testimonial-text">"Great support and quick response. Their CCTV and network services exceeded our expectations."</p>
-          <div class="d-flex align-items-center justify-content-center mt-4">
-            <img src="https://i.pravatar.cc/60?img=3" class="rounded-circle me-3" alt="Client 3">
-            <div>
-              <h6 class="mb-0 fw-semibold">John Mathews</h6>
-              <small class="text-muted">Abu Dhabi, UAE</small>
-            </div>
-          </div>
-        </div>
-      </div>
-
+      <!-- Controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#testimonialSlider" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#testimonialSlider" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
     </div>
   </div>
 </section>
+
 
 
   <!-- Contact Section -->
@@ -734,6 +1017,7 @@
 
 
  <script>
+  // Scroll Animation for elements
   const animatedElements = document.querySelectorAll('.fade-in, .fade-in-up, .animate-img, .img-wrapper');
 
   const observer = new IntersectionObserver(entries => {
@@ -747,7 +1031,33 @@
   }, { threshold: 0.1 });
 
   animatedElements.forEach(el => observer.observe(el));
+
+  // Testimonial Slider - Auto slide and manual navigation
+  document.addEventListener("DOMContentLoaded", function () {
+    const testimonialCarousel = document.querySelector('#testimonialCarousel');
+    if (testimonialCarousel) {
+      // Initialize Bootstrap carousel
+      const carousel = new bootstrap.Carousel(testimonialCarousel, {
+        interval: 5000,      // Change slide every 5 seconds
+        ride: 'carousel',
+        pause: 'hover',      // Pause when hovering
+        wrap: true           // Loop to first slide
+      });
+
+      // Manual control (optional)
+      const nextBtn = document.querySelector('.carousel-control-next');
+      const prevBtn = document.querySelector('.carousel-control-prev');
+
+      if (nextBtn) {
+        nextBtn.addEventListener('click', () => carousel.next());
+      }
+      if (prevBtn) {
+        prevBtn.addEventListener('click', () => carousel.prev());
+      }
+    }
+  });
 </script>
+
 
 
 
